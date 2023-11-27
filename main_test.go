@@ -10,6 +10,6 @@ import (
 
 func TestUpdateGetData(t *testing.T) {
 	mconn := helper.SetConnection("mongodb+srv://Fancy21:Acermaulana21@maulana.uiq9nmy.mongodb.net/?retryWrites=true&w=majority", "gis")
-	datagedung := gq.GeoIntersects(mconn, 108.22752275366888, -6.834996265396847)
+	datagedung := gq.GeoIntersects(mconn, 108.22501803948785, -6.835460702759789)
 	fmt.Println(datagedung)
 }

@@ -26,6 +26,6 @@ func GeoIntersects(mongoconn *mongo.Database, long float64, lat float64) (namalo
 	if err != nil {
 		log.Printf("GeoIntersects: %v\n", err)
 	}
-	return lokasi.Name
+	return lokasi.Properties.Name
 
 }
