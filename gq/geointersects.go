@@ -4,7 +4,7 @@ import (
 	"context"
 	"log"
 
-	"github.com/petapedia/geoquery/models"
+	"github.com/Fancyyy21/geoquery/models"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 )
@@ -26,6 +26,6 @@ func GeoIntersects(mongoconn *mongo.Database, long float64, lat float64) (namalo
 	if err != nil {
 		log.Printf("GeoIntersects: %v\n", err)
 	}
-	return lokasi.Nama
+	return lokasi.Name
 
 }
