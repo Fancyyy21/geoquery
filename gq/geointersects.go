@@ -10,9 +10,9 @@ import (
 )
 
 func GeoIntersects(mongoconn *mongo.Database, long float64, lat float64) (namalokasi string) {
-	lokasicollection := mongoconn.Collection("lokasi")
+	lokasicollection := mongoconn.Collection("gis")
 	filter := bson.M{
-		"batas": bson.M{
+		"geometry": bson.M{
 			"$geoIntersects": bson.M{
 				"$geometry": bson.M{
 					"type":        "Point",

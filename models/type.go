@@ -58,6 +58,6 @@ type Credential struct {
 type Lokasi struct { //lokasi yang bisa melakukan presensi
 	ID       primitive.ObjectID `bson:"_id,omitempty"`
 	Nama     string             `bson:"nama,omitempty"`
-	Batas    Geometry           `bson:"batas,omitempty"`
+	Geometry Geometry           `bson:"batas,omitempty"`
 	Kategori string             `bson:"kategori,omitempty"`
 }
