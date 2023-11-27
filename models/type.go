@@ -65,3 +65,13 @@ type Lokasi struct { //lokasi yang bisa melakukan presensi
 type Name struct { //lokasi yang bisa melakukan presensi
 	Name string `bson:"name,omitempty"`
 }
+
+type LongLat struct {
+	Latitude  float64 `json:"latitude"`
+	Longitude float64 `json:"longitude"`
+}
+
+type Pesan struct {
+	Status  bool   `json:"status" bson:"status"`
+	Message string `json:"message" bson:"message"`
+}
