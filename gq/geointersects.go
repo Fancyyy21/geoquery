@@ -2,7 +2,7 @@ package gq
 
 import (
 	"context"
-	"fmt"
+	"log"
 
 	"github.com/petapedia/geoquery/models"
 	"go.mongodb.org/mongo-driver/bson"
@@ -24,7 +24,7 @@ func GeoIntersects(mongoconn *mongo.Database, long float64, lat float64) (namalo
 	var lokasi models.Lokasi
 	err := lokasicollection.FindOne(context.TODO(), filter).Decode(&lokasi)
 	if err != nil {
-		fmt.Printf("GetLokasi: %v\n", err)
+		log.Printf("GeoIntersects: %v\n", err)
 	}
 	return lokasi.Nama
 
